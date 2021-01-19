@@ -1,0 +1,1 @@
+Create a function in PHP that accepts two parameters, one is a multidimensional array, and another one matches value, and that function will check whether the value exists in an array or not and return true or false.
