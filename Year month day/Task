@@ -1,0 +1,1 @@
+Create one function in PHP that accepts year(EX: 2020) as a parameter and that function will return an array with key as the name of the month and value as the number of days of that month. 
