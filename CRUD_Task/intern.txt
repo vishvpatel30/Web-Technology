@@ -1,0 +1,135 @@
+1.
+
+$c=$b;
+$d=(string)$a.(string)$b;
+
+
+
+2.
+
+$array = array("Key1" => "value1","Key2" => "","Key3" => "value3");
+
+3.
+
+$d=ceil($a);
+
+
+4.
+Create a dynamic function in PHP that will return 6 digits unique code like OTP and that code must not be matched with code (234567).
+
+
+<?php 
+
+function generateNumericOTP($n) { 
+    $generator = "1357902468"; 
+    $result = ""; 
+    
+    
+    back:
+    for ($i = 1; $i <= $n; $i++) { 
+        $result .= substr($generator, (rand()%(strlen($generator))), 1); 
+    }
+    
+    if ($result!='234567'){
+        return $result;
+    }
+    else{
+        goto back;
+    }
+    
+} 
+
+$n = 6; 
+print_r(generateNumericOTP($n)); 
+  
+?>
+
+
+
+5.
+echo " something in PHP"
+
+
+6.
+
+Red
+
+7.
+
+<html>
+<body>
+
+
+<button onclick="myFunction()">Button</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Hello World!";
+  var x=str.split(" ");
+  var str=x[0]+" vishv";
+  var result = str.fontcolor("yellow");
+  document.getElementById("demo").innerHTML = result;
+  document.body.style.background = "blue";
+}
+</script>
+
+</body>
+</html>
+
+
+8.
+Create a function in PHP that accepts two parameters, one is a multidimensional array, and another one matches value, and that function will check whether the value exists in an array or not and return true or false.
+
+<?php
+function cont($array, $ele){
+    $contains = "false";
+    foreach($array as $value){
+      if($value == $ele){
+      $contains = "true";
+      }
+    }
+    return $contains;
+  }
+$arr = array(1,2,3,4,5);
+$ele = 6;
+echo cont($arr, $ele);
+?>
+
+
+9.
+Create one function in PHP that accepts year(EX: 2020) as a parameter and that function will return an array with key as the name of the month and value as the number of days of that month. 
+
+
+<?php
+
+function year($num){
+    
+    $months = array(
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July ',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    );
+
+    for($i=0; $i< 12; $i++){
+        $mon=cal_days_in_month(CAL_GREGORIAN, $i+1, $num);
+        $toshow[$months[$i]]=$mon;
+    }
+
+    return $toshow;
+}
+
+$x=year(2020);
+print_r($x);
+
+?>
